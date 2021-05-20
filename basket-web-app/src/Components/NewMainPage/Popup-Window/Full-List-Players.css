@@ -1,0 +1,130 @@
+.listPlayers {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*background-color: transparent;*/
+    background-color: rgba(0,0,0,0.2);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.listPlayers-Inner {
+    position: relative;
+    padding: 32px;
+    width: 100%;
+    max-width: 440px;
+    /*background-color: white;*/
+    background: linear-gradient(214.53deg, #635189 5.55%, #B174B1 42.84%, #FFABBA 96.18%);
+    border-radius: 16px;
+}
+
+.enemies {
+    background: #775A94;
+}
+
+/*
+.listPlayers-Inner .close-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+*/
+
+.players {
+    /*width: 206.56px;*/
+    height: 26.13px;
+    margin-bottom: 3vh;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 21px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    color: #FFFFFF;
+}
+
+.numbers {
+    height: 26.13px;
+    margin-bottom: 3vh;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 21px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: start;
+    color: #FFFFFF;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+
+    margin-top: 3vh;
+}
+
+.playersWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.playersMiddleware {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.selectTeamName {
+    margin-left: 0.5vw;
+    margin-bottom: 2vh;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    color: #FFFFFF;
+}
+
+.close-btn {
+    display: flex;
+    justify-content: center;
+
+    width: 166px;
+    height: 35px;
+    /*margin-bottom: 3vh;*/
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+    background: transparent;
+
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 16px;
+}
+
+
+.close-btn:hover {
+    background: #FFF5ED;
+    color: #64518A ;
+}
+
+.close-btn:focus {
+    outline: none;
+}

@@ -1,0 +1,608 @@
+.firstField {
+    position: relative;
+}
+
+.secondField {
+    position: relative;
+}
+
+.allPassField {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 7vh;
+}
+
+.allPassField img {
+    position: relative;
+    margin-left: 1vw;
+    max-width: 700px;
+    max-height: 500px;
+
+}
+
+.field_1 {
+    position: absolute;
+    top: 6vh;
+    left: 2.5vw;
+}
+
+.field_2 {
+    position: absolute;
+    top: 29vh;
+    left: 5vw;
+}
+
+.field_3 {
+    position: absolute;
+    top: 35vh;
+    left: 18.3vw;
+}
+
+.field_4 {
+    position: absolute;
+    top: 29vh;
+    left: 31vw;
+}
+
+.field_5 {
+    position: absolute;
+    top: 6vh;
+    left: 34.5vw;
+}
+
+.field_6 {
+    position: absolute;
+    top: 6vh;
+    left: 29.5vw;
+}
+
+.field_7 {
+    position: absolute;
+    top: 21vh;
+    left: 25vw;
+}
+
+.field_8 {
+    position: absolute;
+    top: 25vh;
+    left: 18.3vw;
+}
+
+.field_9 {
+    position: absolute;
+    top: 21vh;
+    left: 11.5vw;
+}
+
+.field_10 {
+    position: absolute;
+    top: 6vh;
+    left: 7.5vw;
+}
+
+.field_11 {
+    position: absolute;
+    top: 6vh;
+    left: 12vw;
+}
+
+.field_12 {
+    position: absolute;
+    top: 16.5vh;
+    left: 18.3vw;
+}
+
+.field_13 {
+    position: absolute;
+    top: 6vh;
+    left: 24.7vw;
+}
+
+.field_14 {
+    position: absolute;
+    top: 6vh;
+    left: 18.3vw;
+}
+.secondField_1 {
+    position: absolute;
+    top: 6vh;
+    left: 2.5vw;
+}
+
+.secondField_2 {
+    position: absolute;
+    top: 29vh;
+    left: 5vw;
+}
+
+.secondField_3 {
+    position: absolute;
+    top: 35vh;
+    left: 18.3vw;
+}
+
+.secondField_4 {
+    position: absolute;
+    top: 29vh;
+    left: 31vw;
+}
+
+.secondField_5 {
+    position: absolute;
+    top: 6vh;
+    left: 34.5vw;
+}
+
+.secondField_6 {
+    position: absolute;
+    top: 6vh;
+    left: 29.5vw;
+}
+
+.secondField_7 {
+    position: absolute;
+    top: 21vh;
+    left: 25vw;
+}
+
+.secondField_8 {
+    position: absolute;
+    top: 25vh;
+    left: 18.3vw;
+}
+
+.secondField_9 {
+    position: absolute;
+    top: 21vh;
+    left: 11.5vw;
+}
+
+.secondField_10 {
+    position: absolute;
+    top: 6vh;
+    left: 7.5vw;
+}
+
+.secondField_11 {
+    position: absolute;
+    top: 6vh;
+    left: 12vw;
+}
+
+.secondField_12 {
+    position: absolute;
+    top: 16.5vh;
+    left: 18.3vw;
+}
+
+.secondField_13 {
+    position: absolute;
+    top: 6vh;
+    left: 24.7vw;
+}
+
+.secondField_14 {
+    position: absolute;
+    top: 6vh;
+    left: 18.3vw;
+}
+
+.MessageBtn {
+    border: 3px solid #493D4E;
+    box-sizing: border-box;
+    border-radius: 16px;
+    background: transparent;
+
+    width: 235.95px;
+    height: 43.2px;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 3vh;
+
+
+    color: #493D4E;
+    cursor: pointer;
+}
+
+.MessageBtn:focus {
+    outline: none;
+}
+
+.MessageBtn:hover {
+    color: #FFE9D6;
+    background: #493D4E;
+    cursor: pointer;
+}
+
+.Text {
+    /*margin: auto;*/
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3vh;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 21px;
+}
+
+.Wrapper {
+
+}
+
+@media (max-width: 1024px) {
+    .allPassField {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .firstField {
+        margin-bottom: 3vh;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .secondField {
+        margin-bottom: 3vh;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .field_1 {
+        position: absolute;
+        top: 4vh;
+        left: 3vw;
+    }
+
+    .field_2 {
+        position: absolute;
+        top: 19vh;
+        left: 4vw;
+    }
+
+    .field_3 {
+        position: absolute;
+        top: 25vh;
+        left: 33.3vw;
+    }
+
+    .field_4 {
+        position: absolute;
+        top: 19vh;
+        left: 62vw;
+    }
+
+    .field_5 {
+        position: absolute;
+        top: 4vh;
+        left: 63.5vw;
+    }
+
+    .field_6 {
+        position: absolute;
+        top: 4vh;
+        left: 54.5vw;
+    }
+
+    .field_7 {
+        position: absolute;
+        top: 15vh;
+        left: 46vw;
+    }
+
+    .field_8 {
+        position: absolute;
+        top: 18vh;
+        left: 33.3vw;
+    }
+
+    .field_9 {
+        position: absolute;
+        top: 15vh;
+        left: 20.5vw;
+    }
+
+    .field_10 {
+        position: absolute;
+        top: 4vh;
+        left: 12.5vw;
+    }
+
+    .field_11 {
+        position: absolute;
+        top: 4vh;
+        left: 21vw;
+    }
+
+    .field_12 {
+        position: absolute;
+        top: 11vh;
+        left: 33.3vw;
+    }
+
+    .field_13 {
+        position: absolute;
+        top: 4vh;
+        left: 45.7vw;
+    }
+
+    .field_14 {
+        position: absolute;
+        top: 4vh;
+        left: 33.3vw;
+    }
+    .secondField_1 {
+        position: absolute;
+        top: 4vh;
+        left: 3vw;
+    }
+
+    .secondField_2 {
+        position: absolute;
+        top: 19vh;
+        left: 4vw;
+    }
+
+    .secondField_3 {
+        position: absolute;
+        top: 25vh;
+        left: 33.3vw;
+    }
+
+    .secondField_4 {
+        position: absolute;
+        top: 19vh;
+        left: 62vw;
+    }
+
+    .secondField_5 {
+        position: absolute;
+        top: 4vh;
+        left: 63.5vw;
+    }
+
+    .secondField_6 {
+        position: absolute;
+        top: 4vh;
+        left: 54.5vw;
+    }
+
+    .secondField_7 {
+        position: absolute;
+        top: 15vh;
+        left: 46vw;
+    }
+
+    .secondField_8 {
+        position: absolute;
+        top: 18vh;
+        left: 33.3vw;
+    }
+
+    .secondField_9 {
+        position: absolute;
+        top: 15vh;
+        left: 20.5vw;
+    }
+
+    .secondField_10 {
+        position: absolute;
+        top: 4vh;
+        left: 12.5vw;
+    }
+
+    .secondField_11 {
+        position: absolute;
+        top: 4vh;
+        left: 21vw;
+    }
+
+    .secondField_12 {
+        position: absolute;
+        top: 11vh;
+        left: 33.3vw;
+    }
+
+    .secondField_13 {
+        position: absolute;
+        top: 4vh;
+        left: 45.7vw;
+    }
+
+    .secondField_14 {
+        position: absolute;
+        top: 4vh;
+        left: 33.3vw;
+    }
+
+
+}
+
+@media (max-width: 768px) {
+    .allPassField {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .firstField {
+        margin-bottom: 3vh;
+    }
+
+    .field_1 {
+        position: absolute;
+        top: 5vh;
+        left: 4vw;
+    }
+
+    .field_2 {
+        position: absolute;
+        top: 25vh;
+        left: 4vw;
+    }
+
+    .field_3 {
+        position: absolute;
+        top: 33vh;
+        left: 43.3vw;
+    }
+
+    .field_4 {
+        position: absolute;
+        top: 25vh;
+        left: 83vw;
+    }
+
+    .field_5 {
+        position: absolute;
+        top: 5vh;
+        left: 83.5vw;
+    }
+
+    .field_6 {
+        position: absolute;
+        top: 5vh;
+        left: 72.5vw;
+    }
+
+    .field_7 {
+        position: absolute;
+        top: 20vh;
+        left: 61vw;
+    }
+
+    .field_8 {
+        position: absolute;
+        top: 24vh;
+        left: 43.3vw;
+    }
+
+    .field_9 {
+        position: absolute;
+        top: 20vh;
+        left: 26.5vw;
+    }
+
+    .field_10 {
+        position: absolute;
+        top: 5vh;
+        left: 16.5vw;
+    }
+
+    .field_11 {
+        position: absolute;
+        top: 5vh;
+        left: 28vw;
+    }
+
+    .field_12 {
+        position: absolute;
+        top: 15vh;
+        left: 43.3vw;
+    }
+
+    .field_13 {
+        position: absolute;
+        top: 5vh;
+        left: 60.7vw;
+    }
+
+    .field_14 {
+        position: absolute;
+        top: 5vh;
+        left: 43.3vw;
+    }
+    .secondField_1 {
+        position: absolute;
+        top: 5vh;
+        left: 4vw;
+    }
+
+    .secondField_2 {
+        position: absolute;
+        top: 25vh;
+        left: 4vw;
+    }
+
+    .secondField_3 {
+        position: absolute;
+        top: 33vh;
+        left: 43.3vw;
+    }
+
+    .secondField_4 {
+        position: absolute;
+        top: 25vh;
+        left: 83vw;
+    }
+
+    .secondField_5 {
+        position: absolute;
+        top: 5vh;
+        left: 83.5vw;
+    }
+
+    .secondField_6 {
+        position: absolute;
+        top: 5vh;
+        left: 72.5vw;
+    }
+
+    .secondField_7 {
+        position: absolute;
+        top: 20vh;
+        left: 61vw;
+    }
+
+    .secondField_8 {
+        position: absolute;
+        top: 24vh;
+        left: 43.3vw;
+    }
+
+    .secondField_9 {
+        position: absolute;
+        top: 20vh;
+        left: 26.5vw;
+    }
+
+    .secondField_10 {
+        position: absolute;
+        top: 5vh;
+        left: 16.5vw;
+    }
+
+    .secondField_11 {
+        position: absolute;
+        top: 5vh;
+        left: 28vw;
+    }
+
+    .secondField_12 {
+        position: absolute;
+        top: 15vh;
+        left: 43.3vw;
+    }
+
+    .secondField_13 {
+        position: absolute;
+        top: 5vh;
+        left: 60.7vw;
+    }
+
+    .secondField_14 {
+        position: absolute;
+        top: 5vh;
+        left: 43.3vw;
+    }
+}
+
+

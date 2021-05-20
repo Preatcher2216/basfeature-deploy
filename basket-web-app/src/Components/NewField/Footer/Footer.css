@@ -1,0 +1,97 @@
+.PersonPageFooter {
+    display: flex;
+    flex-direction: row;
+    /* padding-left: 10vw; */
+    background: #493D4E;
+    margin: auto;
+    width: 100%;
+    justify-content: center;
+}
+.ant-layout-footer {
+    display: flex;
+    flex-direction: row;
+    /* padding-left: 10vw; */
+    background: #493D4E;
+    margin: auto;
+    width: 100%;
+    justify-content: center;
+}
+
+.Project {
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 4vw;
+    margin-bottom: 5vh;
+
+}
+
+.PersonPageFooterTextTitle {
+    margin-bottom: 3vh;
+    margin-left: 1vw;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    /* identical to box height */
+
+
+    color: #FFE9D6;
+}
+
+
+.PersonPageFooterTextCenter {
+    width: 180px;
+
+    margin-bottom: 3vh;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    /* identical to box height */
+
+
+    color: #FFE9D6;
+}
+
+.PersonPageFooterTextEnd {
+    width: 400px;
+
+    margin-bottom: 3vh;
+    margin-left: 1vw;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    /* identical to box height */
+
+
+    color: #FFE9D6;
+}
+
+@media (max-width: 650px) {
+    .PersonPageFooterTextEnd {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+    }
+}
+
+@media(max-width: 400px) {
+    .PersonPageFooterTextEnd {
+        width: 100%;
+        display: flex;
+    }
+}
+
+.PersonPageFooterText {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 22px;
+
+    color: #FFE9D6;
+}

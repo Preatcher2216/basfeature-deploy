@@ -1,0 +1,10 @@
+.gameHistoryPost {
+    background-color: seagreen;
+    color: black;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.gameHistoryPost:hover {
+    background-color: aliceblue;
+}

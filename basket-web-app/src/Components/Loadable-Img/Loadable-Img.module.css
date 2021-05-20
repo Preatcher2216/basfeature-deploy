@@ -1,0 +1,66 @@
+.container {
+    /*background: linear-gradient(214.53deg, #635189 5.55%, #B174B1 42.84%, #FFABBA 96.18%);*/
+    /*box-sizing: border-box;*/
+    overflow: hidden;
+    position: relative;
+}
+
+.container::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -150px;
+    top: 0;
+    height: 100%;
+    width: 150px;
+    background: linear-gradient(to right, transparent 0%, rgba(38, 179, 255, 0.09) 50%, transparent 100%);
+    animation: load 1s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+}
+
+@keyframes load {
+    from{
+        left: -150px;
+    }
+    to {
+        left: 100%;
+    }
+}
+
+.containerLoaded::before {
+    animation: none;
+}
+
+.image {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.imageLoaded {
+    opacity: 1;
+    width: 350px;
+    height: 350px;
+}
+
+@media (max-width: 1800px) {
+    .imageLoaded {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 1600px) {
+    .imageLoaded {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 450px) {
+    .imageLoaded {
+        width: 150px;
+        height: 150px;
+    }
+}

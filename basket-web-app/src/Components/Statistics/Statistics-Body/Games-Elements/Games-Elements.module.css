@@ -1,0 +1,67 @@
+.MainWrapper {
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid #775A94;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.MainWrapper:hover {
+    background: #FDD9B5;
+}
+
+.Text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 56px;
+    display: flex;
+    align-items: center;
+
+    color: #64518A;
+}
+
+.TextBlock {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 56px;
+    display: flex;
+    align-items: center;
+
+    color: #FFF5ED;
+}
+
+.CloseBtn {
+    border: 3px solid #775A94;
+    box-sizing: border-box;
+    border-radius: 16px;
+
+    width: 235.95px;
+    height: 43.2px;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 2vh;
+    margin-bottom: 3vh;
+
+
+    color: #FFF5ED;
+    background: #775A94;
+    cursor: pointer;
+}
+
+.CloseBtn:hover {
+
+}
+
+.CloseBtn:focus {
+    outline: none;
+}

@@ -1,0 +1,898 @@
+.PersonPageHeader {
+    display: flex;
+    flex-direction: column;
+}
+
+.ant-layout-header {
+    width: 100%;
+    height: auto;
+    /*padding: 0 20%;*/
+}
+
+.ant-layout-header header {
+    max-width: 1280px;
+}
+
+/*NavigationMenu*/
+.NavigationMenu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 5vh;
+    padding-top: 2vh;
+}
+
+.PersonName {
+    /*width: 7vw;*/
+    color: #FFE9D6;
+    font-size: 21px;
+}
+
+.NavigationButtons {
+    display: flex;
+    flex-direction: row;
+    padding-left: 0;
+}
+
+.HeaderNavButton {
+    background-color: #493D4E;
+    color: #FFE9D6;
+    border: 1px transparent solid;
+    font-size: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 3vw;
+}
+
+.HeaderNavButton:hover {
+    background-color: #FFE9D6;
+    border: 1px #493D4E solid;
+    color: #493D4E;
+}
+
+.HeaderNavButton:focus {
+    background-color: #FFE9D6;
+    border: 1px #493D4E solid;
+    color: #493D4E;
+}
+
+/*HeaderDescription*/
+
+.HeaderDescription {
+    margin: auto;
+    min-width: 1600px;
+}
+
+@media (max-width: 1650px) {
+    .HeaderDescription {
+        min-width: 1000px;
+    }
+}
+
+@media (max-width: 1270px) {
+    .HeaderDescription {
+        min-width: 600px;
+    }
+}
+
+@media (max-width: 700px) {
+    .HeaderDescription {
+        min-width: 300px;
+    }
+}
+
+.HeaderText {
+    display: flex;
+    flex-direction: column;
+}
+
+.SubHeaderTextOne {
+    /*font-family: Roboto, serif;*/
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 41px;
+    display: flex;
+    align-items: center;
+
+    color: #91686F;
+}
+
+.SubHeaderTextTwo {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 55px;
+    line-height: 64px;
+    display: flex;
+    align-items: center;
+
+    color: #FFACBB;
+}
+
+.SubHeaderTextThree {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+
+    color: #91686F;
+}
+
+.SfeduLogo {
+    position: relative;
+    padding-left: 3vw;
+}
+
+/*PersonPageContent*/
+
+.ant-layout-content {
+    height: auto;
+    padding: 0 20%;
+    background-color: #FFE9D6;
+}
+
+.PersonPageHeader {
+
+}
+
+.PersonPageCreateTeamText {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 56px;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+
+    color: #64518A;
+}
+
+/*PersonPageCreateTeamField*/
+
+.PersonPageCreateTeamField {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    display: flex;
+    max-width: 1168px;
+    /* max-height: 459px; */
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+    justify-content: flex-end;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+
+    background-color: #FFF5ED;
+    box-shadow: 0px 1px 21px rgba(0, 0, 0, 0.35);
+    border-radius: 16px;
+}
+
+/*PersonPageFieldLeftSide*/
+.PersonPageFieldLeftSide {
+    /* position: absolute; */
+    /* width: 550px; */
+    /* height: 460px; */
+    /* left: 0; */
+    width: 50%;
+}
+
+.TitleTeamInput {
+    /* display: flex; */
+    /* width: 13.5vw; */
+    width: 90%;
+    /* max-width: 200px; */
+    /* height: 43px; */
+    font-style: normal;
+    font-weight: normal;
+    font-size: 29px;
+    line-height: 34px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 2vh;
+    margin-left: 3vh;
+    margin-bottom: 3vh;
+    border: 2px #64518A solid;
+    border-radius: 10px;
+    background: #FFF5ED;
+    color: rgba(100, 81, 138, 0.5);
+}
+
+.TitleTeamInput:focus {
+    outline: none;
+    border-color: rgba(100, 81, 138, 0.5);
+}
+
+@media (max-width: 1600px) {
+    .ChooseTeam {
+        font-size: 25px !important;
+    }
+
+    .ChooseTeamButton {
+        font-size: 25px !important;
+    }
+
+    .ant-layout-content {
+        padding: 0 10%;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .NavigationButtons  button {
+        font-size: 27px!important;
+        padding-top: 5% !important;
+        padding-bottom: 2% !important;
+    }
+
+    .NavigationButtons {
+        padding-bottom: 3vh !important;
+    }
+
+    .MobileNavigation {
+        padding-top: 3vh !important;
+        padding-bottom: 3vh !important;
+        z-index: 1;
+    }
+
+    .ant-layout-content {
+        padding: 0 5%;
+    }
+
+    .TitleTeamInput {
+        width: 90%;
+    }
+
+    .CommentsForTeamTextArea {
+        width: 90% !important;
+        height: 40% !important;
+    }
+
+    .ChooseTeam {
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 768px) {
+
+    .NavigationButtons  button {
+        font-size: 27px!important;
+        padding-top: 6% !important;
+    }
+
+    .MobileNavigation {
+        padding-top: 4vh !important;
+        z-index: 1;
+    }
+
+    .SubHeaderTextTwo {
+        font-size: 40px;
+    }
+
+    .PersonPageCreateTeamText {
+        font-size: 35px;
+    }
+
+    .PersonPageMyTeamText {
+        font-size: 35px !important;
+    }
+
+    .EnemyTeamText {
+        font-size: 35px !important;
+    }
+
+    .PersonPageCreateTeamField {
+        flex-direction: column;
+        max-width: 630px;
+    }
+
+    .PersonPageFieldLeftSide {
+        width: 100% !important;
+    }
+
+    .PersonPageFieldRightSide {
+        width: 100% !important;
+    }
+
+   /* .SubHeaderTextOne {
+        width: 70%;
+    }
+
+    .SubHeaderTextTwo {
+        width: 70%;
+    }
+
+    .SubHeaderTextThree {
+        width: 70%;
+    }*/
+
+    .HeaderText {
+        width: 90%;
+    }
+}
+
+@media (max-width: 414px) {
+    .HeaderDescription {
+        display: none !important;
+    }
+
+    .NavigationButtons  button {
+        font-size: 27px!important;
+        padding-bottom: 7% !important;
+    }
+}
+
+@media (max-width: 375px) {
+    .NavigationButtons  button {
+        font-size: 27px!important;
+        padding-bottom: 9.5% !important;
+    }
+}
+
+@media(max-width: 320px) {
+    .TeamsCard {
+        width: 100% !important;
+    }
+
+    .NavigationButtons  button {
+        font-size: 27px!important;
+        padding-bottom: 7% !important;
+    }
+}
+
+.ChooseTeam {
+    display: flex;
+    margin-left: 3vh;
+    width: 90%;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 29px;
+    line-height: 34px;
+    /*display: flex;*/
+    align-items: center;
+    text-align: center;
+
+    color: #64518A;
+}
+
+.ChooseTeamText {
+
+}
+
+.ChooseTeamButtons {
+    margin-left: 0.5vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.ChooseTeamButton {
+    background: #FFF5ED;
+    border: 2px transparent solid;
+
+    color: #64518A;
+    font-size: 29px;
+    line-height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ButtonBorder {
+    border-bottom: 2px #64518A solid;
+}
+
+.imgBorder {
+    outline-color: #64518A;
+    outline-width: 2px;
+    outline-style: solid;
+}
+
+.ChooseTeamButton:hover {
+    background: #FFF5ED;
+    color: #64518A;
+}
+
+.ChooseTeamButton:focus {
+    outline: none;
+    border: 2px transparent solid;
+    transition: none;
+    background: #FFF5ED;
+    color: #64518A;
+    border-bottom: 2px #64518A solid;
+}
+
+.ChooseTeamButton:last-child {
+    margin-left: 0.5vw;
+}
+
+.CommentsForTeamTextArea {
+    width: 90%;
+    height: 30vh;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 29px;
+    line-height: 34px;
+    display: flex;
+    align-items: start;
+    text-align: start;
+    resize: none;
+    margin-top: 2vh;
+    margin-left: 3vh;
+    margin-bottom: 3vh;
+    border: 2px #64518A solid;
+    border-radius: 10px;
+    background: #FFF5ED;
+    color: rgba(100, 81, 138, 0.5);
+}
+
+.CommentsForTeamTextArea:focus {
+    outline: none;
+    border-color: rgba(100, 81, 138, 0.5);
+}
+
+/*PersonPageFieldRightSide*/
+.PersonPageFieldRightSide {
+    /* position: absolute; */
+    /* max-width: 617px; */
+    /* height: 460px; */
+    width: 55%;
+    /* right: 0; */
+    background: linear-gradient(
+            241.65deg, #64518A 0.53%, #FFACBB 99.5%);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.PlayerInfoInputsGroup {
+    display: flex;
+    margin-top: 1.5vh;
+    margin-left: 1.5vh;
+}
+
+.InputPlayerNumberForm {
+    max-width: 58px;
+    height: 43px;
+    width: 10%;
+    margin-bottom: 2vh;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 29px;
+    line-height: 34px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border: none;
+    color: #64518A;
+    /* opacity: 0.5; */
+    background: #FFF5ED;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+.InputPlayerNumberForm:focus {
+    outline: none;
+    /*border-color:rgba(100, 81, 138, 0.5);*/
+}
+
+.InputPlayerNameForm {
+    /* width: 13vw; */
+    /* height: 43px; */
+    width: 80%;
+    margin-bottom: 2vh;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 29px;
+    line-height: 34px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFF5ED;
+    background: transparent;
+    margin-left: 2vh;
+    border: 2px solid #FFF5ED;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.InputPlayerNameForm:focus {
+    outline: none;
+    border-color: rgba(100, 81, 138, 0.5);
+}
+
+.ButtonWrapper {
+    display: flex;
+    justify-content: center;
+    margin-left: 1vw;
+    margin-top: 3vh;
+    flex-direction: column;
+}
+
+.InputsConnection {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.AddPlayerButtonFormBlock {
+    display: flex;
+    justify-content: center;
+    margin-left: 3vw;
+    margin-bottom: 3vh;
+}
+
+.AddPlayerButtonForm {
+    width: 50px;
+    height: 43px;
+    /*margin: 5vh  27vh auto;*/
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 49px;
+    line-height: 34px;
+    display: flex;
+    align-items: start;
+    text-align: center;
+    justify-content: center;
+
+    color: #64518A;
+
+    border: 2px transparent solid;
+    background: #FFF5ED;
+    border-radius: 102px;
+}
+
+.AddPlayerButtonForm:hover {
+    outline: none;
+    border-color: #FFF5ED;
+    background: transparent;
+}
+
+.AddPlayerButtonForm:focus {
+    outline: none;
+}
+
+.CreateTeamButtonFormBlock {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1.5vh;
+    margin-right: 1vw;
+}
+
+.CreateTeamButtonForm {
+    /* width: 5vw; */
+    padding: 10px;
+    height: 35px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 29px;
+    line-height: 34px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: #FFF5ED;
+    background: transparent;
+    border: 2px solid #FFF5ED;
+    box-sizing: border-box;
+    border-radius: 16px;
+}
+
+.CreateTeamButtonForm:hover {
+    outline: none;
+    border-color: transparent;
+    background: #FFF5ED;
+    color: #64518A;
+}
+
+.CreateTeamButtonForm:focus {
+    outline: none;
+}
+
+/*MyTeamBlock*/
+
+.PersonPageMyTeamText {
+    margin-bottom: 9vh;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 56px;
+    display: flex;
+    align-items: center;
+
+    color: #64518A;
+}
+
+.MyTeams {
+    /*border: 2px #493D4E solid;*/
+    height: 351px;
+    margin-top: 3vh;
+    margin-bottom: 10vh;
+}
+
+.EnemyTeamText {
+    margin-bottom: 9vh;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 56px;
+    display: flex;
+    align-items: center;
+
+    color: #64518A;
+}
+
+.MyTeams {
+    height: 351px;
+    margin-top: 3vh;
+    margin-bottom: 10vh;
+}
+
+.TeamsCardContainer {
+    display: flex;
+}
+
+.TeamsCard {
+    width: 299px;
+    /*height: 351px;*/
+    margin: auto;
+
+
+    background: linear-gradient(214.53deg, #635189 5.55%, #B174B1 42.84%, #FFABBA 96.18%);
+    border-radius: 16px;
+}
+
+.TeamsCard {
+    display: flex;
+    flex-direction: column;
+}
+
+.TeamsCardTitle {
+    margin-left: 0.5vw;
+    margin-top: 4vh;
+    margin-bottom: 2vh;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    color: #FFFFFF;
+}
+
+.TeamsCardContent {
+    display: flex;
+    flex-direction: row;
+    height: 250px;
+    overflow: hidden;
+}
+
+.TeamsCardPlayersNames {
+    margin-top: 3vh;
+    margin-left: 1.5vw;
+}
+
+.TeamsCardPlayerName {
+    width: 206.56px;
+    height: 26.13px;
+    margin-bottom: 3vh;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    color: #FFFFFF;
+}
+
+.TeamsCardPlayersNumbers {
+    margin-top: 3vh;
+}
+
+.TeamsCardPlayerNumber {
+    height: 26.13px;
+    margin-bottom: 3vh;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: start;
+
+    color: #FFFFFF;
+}
+
+.TeamsCardButtonContainer {
+    margin-top: 3vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3vh;
+}
+
+.TeamsCardButton {
+    padding: 10px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    background: transparent;
+
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 16px;
+}
+
+.TeamsCardButton:hover {
+    background: #FFF5ED;
+    color: #64518A;
+}
+
+.TeamsCardButton:focus {
+    outline: none;
+}
+
+.EnemyTeamCard {
+    background: #775A94 !important;
+}
+
+.EnemyBlockBottom {
+    margin-bottom: 5vh !important;
+}
+
+.PersonPageFooter {
+    display: flex;
+    flex-direction: row;
+
+    background: #493D4E;
+}
+
+.ant-layout-footer {
+    display: flex;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    /* padding: 0 20%; */
+    margin: auto;
+}
+
+.Project {
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 4vw;
+    margin-bottom: 5vh;
+
+}
+
+.PersonPageFooterTextTitle {
+    margin-bottom: 3vh;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    /* identical to box height */
+
+
+    color: #FFE9D6;
+}
+
+
+.PersonPageFooterTextCenter {
+    width: 180px;
+
+    margin-bottom: 3vh;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    /* identical to box height */
+
+
+    color: #FFE9D6;
+}
+
+.PersonPageFooterTextEnd {
+    width: 400px;
+
+    margin-bottom: 3vh;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    /* identical to box height */
+
+
+    color: #FFE9D6;
+}
+
+.PersonPageFooterText {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 22px;
+
+    color: #FFE9D6;
+}
+
+.PersonPageFooterText a {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 22px;
+
+    color: #FFE9D6;
+}
+
+.Slider {
+    display: inline-block;
+}
+
+.slick-prev {
+    left: -3vw;
+}
+
+.slick-prev:before {
+    content: none !important;
+    opacity: unset !important;
+    color: transparent !important;
+}
+
+.slick-next {
+    right: -3vw !important;
+}
+
+.slick-next:before {
+    content: none !important;
+    opacity: unset !important;
+    color: transparent !important;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+input::-webkit-input-placeholder {
+    color: rgba(100, 81, 138, 0.5);
+}
+
+input::-moz-placeholder {
+    color: rgba(100, 81, 138, 0.5);
+}
+
+textarea::-webkit-input-placeholder {
+    color: rgba(100, 81, 138, 0.5);
+}
+
+textarea::-moz-placeholder {
+    color: rgba(100, 81, 138, 0.5);
+}
+
+
+
+
+
+
+
+

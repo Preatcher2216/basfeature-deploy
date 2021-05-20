@@ -1,0 +1,12 @@
+.MainWrapper {
+    /*padding-right: 20vw;*/
+    padding-left: 7vw;
+    background: #493D4E;
+}
+
+@media (max-width: 600px) {
+    .MainWrapper {
+        display: none;
+    }
+
+}

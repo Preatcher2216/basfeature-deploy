@@ -1,0 +1,55 @@
+.ant-select-selector {
+    background-color: #493D4E !important;
+    border: none !important;
+    border-bottom: 1px solid #FFD8B5 !important;
+    width: 508px !important;
+    height: 125px !important;
+    /*padding: 0 !important;*/
+}
+
+.ant-select-selection-search-input {
+    height: 124px !important;
+    color: #FFD8B5 !important;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 56px;
+    display: flex;
+    align-items: center;
+    margin-right: 31px;
+}
+
+.ant-select-selection-placeholder {
+    color: #FFD8B5 !important;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 56px;
+    display: flex;
+    align-items: center;
+}
+
+.ant-select-arrow {
+    color: #FFD8B5 !important;
+    float: right !important;
+}
+
+.ant-select-selection-item {
+    color: #FFD8B5 !important;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 56px;
+    display: flex;
+    align-items: center;
+}
+
+.push_but:active {
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset, 0 -1px 0 rgba(255, 255, 255, .1);
+    -moz-transform: translatey(3px); /* Для Firefox */
+    -ms-transform: translatey(3px); /* Для IE */
+    -webkit-transform: translatey(3px); /* Для Safari, Chrome, iOS */
+    -o-transform:translatey(3px); /* Для Opera */
+    transform: translatey(3px);
+}
+

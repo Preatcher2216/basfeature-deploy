@@ -1,0 +1,369 @@
+.Field {
+    display: flex;
+    background: #FFE9D6;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.FieldMain {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.MyTeams {
+    height: 860px;
+    overflow: hidden;
+}
+
+.EnemyTeams {
+
+}
+
+.MyPlayersElement {
+    width: 152px;
+    height: 107px;
+    background: #FFA859;
+    border: 5px solid #493D4E;
+    box-sizing: border-box;
+    border-radius: 22px;
+    margin-top: 3vh;
+    margin-left: 3vw;
+    margin-right: 2vw;
+
+    font-style: normal;
+    font-weight: 300;
+    font-size: 59px;
+    line-height: 69px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    color: #FFFFFF;
+
+    filter: drop-shadow(-6px 5px 7px rgba(0, 0, 0, 0.25));
+}
+
+.TeamTitle {
+    /*margin-top: 3vh;*/
+    margin-left: 1vw;
+    width: 12vw;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-bottom: 2px solid #493D4E;
+    color: #493D4E;
+}
+
+.TeamTitleEnemy {
+    margin-left: 0vw;
+}
+
+.Wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.MyPlayersChange {
+    background: #493D4E;
+    border-radius: 22px;
+    padding: 4vh;
+    margin-top: 3vh;
+    margin-left: 1vw;
+    margin-bottom: 3vh;
+    margin-right: 1vw;
+
+    font-style: normal;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 42px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    color: #FFFFFF;
+}
+
+.MyPlayersChangeEnemy {
+    margin-right: 1vw;
+}
+
+.Action {
+    display: flex;
+    flex-direction: column;
+}
+
+.ButtonsWrapperButtonsWrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.PopupWindowBtn {
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 15px;
+    background: transparent;
+
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    color: #FFFFFF;
+}
+
+.Btn {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 28px;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+
+
+.SuccessBtnWrapper {
+    width: 200px;
+    height: 152px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #FFACBB;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.FailBtnWrapper {
+    width: 200px;
+    height: 152px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #493D4E;
+    border-radius: 15px;
+    padding: 20px;
+    margin-left: 30px;
+}
+
+.ButtonsWrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.Img {
+    padding: -10px;
+}
+
+.Sector {
+    margin-bottom: 20px;
+
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    color: #FFFFFF;
+}
+
+.PopupWindowBtn {
+    margin-top: 20px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.PopupWindowBtn {
+    outline: none;
+}
+
+.MyTeamElements {
+    overflow: auto;
+    height: 690px;
+}
+
+path:hover {
+    fill: #CC3333;
+}
+
+circle:hover {
+    fill: #CC3333;
+}
+
+.FieldWrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.MainElements {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.MessageBtn {
+    border: 3px solid #493D4E;
+    box-sizing: border-box;
+    border-radius: 16px;
+    background: transparent;
+
+    width: 235.95px;
+    height: 43.2px;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 3vh;
+
+
+    color: #493D4E;
+    cursor: pointer;
+}
+
+.MessageBtn:focus {
+    outline: none;
+}
+
+.MessageBtn:hover {
+    color: #FFE9D6;
+    background: #493D4E;
+    cursor: pointer;
+}
+
+@media (max-width: 1800px) {
+    .FieldMain {
+        margin: 0;
+        width: 70%;
+    }
+
+    .MainElements {
+        width: 90%;
+    }
+}
+
+@media (max-width: 1600px) {
+    .FieldMain svg {
+        width: 1008px;
+        height: 565px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .FieldMain svg {
+        width: 803px;
+        height: 455px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .FieldMain {
+        position: absolute;
+        margin-top: 30vh;
+        margin-left: 15vw;
+    }
+
+    .FieldWrapper {
+        flex-direction: column;
+    }
+
+    .Wrapper {
+        flex-direction: row;
+    }
+
+    .Wrapper:last-child {
+        padding-bottom: 40vh;
+    }
+
+    .TeamTitle {
+        margin-left: 0;
+    }
+
+    .MyTeams {
+        flex-direction: row;
+        height: 157px;
+        overflow: auto !important;
+    }
+
+    .MyTeamElements {
+        height: 157px;
+        width: 800px;
+        display: flex;
+        overflow: auto !important;
+    }
+
+    .MessageBtn {
+        margin-top: 3vh;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .FieldMain {
+        position: absolute;
+        margin-top: 30vh;
+        margin-left: 15vw;
+    }
+
+    .FieldWrapper {
+        flex-direction: column;
+    }
+
+    .Wrapper {
+        flex-direction: row;
+    }
+
+    .Wrapper:last-child {
+        padding-bottom: 40vh;
+    }
+
+    .TeamTitle {
+        margin-left: 0;
+    }
+
+    .MyTeams {
+        flex-direction: row;
+        height: 157px;
+        overflow: auto !important;
+    }
+
+    .MyTeamElements {
+        height: 157px;
+        width: 600px;
+        display: flex;
+        overflow: auto !important;
+    }
+
+    .MessageBtn {
+        margin-top: 3vh;
+    }
+}

@@ -1,0 +1,3 @@
+.ant-btn-primary > a:only-child::after {
+    margin-left: 100px!important;
+}

@@ -1,0 +1,8 @@
+/*.app-wrapper{
+  display: flex;
+  flex-flow: row wrap;
+}*/
+
+body{
+    width: 100%;
+}

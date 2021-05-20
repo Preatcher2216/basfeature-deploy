@@ -1,0 +1,106 @@
+.Select {
+    background-color: #493D4E;
+}
+
+.TeamChooseWrapper {
+    height: 100% ;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(73, 61, 78);
+    padding-left: 20vw;
+    padding-right: 20vw;
+    padding-bottom: 5vh;
+}
+
+.SelectWrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.SelectBlock {
+    display: flex;
+    flex-direction: column;
+    margin-right:  5vw;
+}
+
+.SelectTitle {
+    margin-left: 11px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 42px;
+    display: flex;
+    align-items: center;
+
+
+
+    color: #90686F;
+}
+
+.SelectBtn {
+
+    width: 506px;
+    height: 82.17px;
+    margin-top: 10vh;
+    margin-left: auto;
+    margin-right: auto;
+    background: #FFACBB;
+    border-radius: 64px;
+    border: 1px solid #493D4E;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 56px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    color: #493D4E;
+
+}
+
+.SelectBtn:active {
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset, 0 -1px 0 rgba(255, 255, 255, .1);
+    -moz-transform: translatey(3px); /* Для Firefox */
+    -ms-transform: translatey(3px); /* Для IE */
+    -webkit-transform: translatey(3px); /* Для Safari, Chrome, iOS */
+    -o-transform:translatey(3px); /* Для Opera */
+    transform: translatey(3px);
+}
+
+.SelectBtn:focus {
+    outline: none;
+}
+
+.ant-select-selector {
+    background-color: #493D4E !important;
+}
+
+.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+    background-color: transparent !important;
+}
+
+@media (max-width: 1200px) {
+    .TeamChooseWrapper {
+        padding-left: 0;
+        padding-right: 0;
+        margin: auto;
+    }
+
+    .SelectBlock {
+        margin: auto;
+        font-size: 27px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .SelectWrapper {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 800px) {
+
+}

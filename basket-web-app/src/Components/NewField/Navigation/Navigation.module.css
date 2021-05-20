@@ -1,0 +1,48 @@
+.NavigationMenu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-bottom: 10vh;
+  background-color: rgb(73, 61, 78);
+  padding-top: 2vh;
+}
+
+.PersonName {
+  display: inline-block;
+  color: #FFE9D6;
+  font-size: 21px;
+  padding-left: 14%;
+}
+
+
+
+.ButtonsShift {
+  margin-left: 100px;
+}
+
+.HeaderNavButton {
+  background-color: #493D4E;
+  color: #FFE9D6;
+  border: 1px transparent solid;
+  font-size: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.FirstBtn {
+  padding-left: 14%;
+}
+
+.HeaderNavButton:hover {
+  background-color: #FFE9D6;
+  border: 1px #493D4E solid;
+  color: #493D4E;
+}
+
+.HeaderNavButton:focus {
+  background-color: #FFE9D6;
+  border: 1px #493D4E solid;
+  color: #493D4E;
+}

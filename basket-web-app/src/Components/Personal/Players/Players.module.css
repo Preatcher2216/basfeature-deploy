@@ -1,0 +1,9 @@
+.playerContainer {
+    display: flex;
+}
+
+.playerNamesWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}

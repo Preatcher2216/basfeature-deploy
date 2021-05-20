@@ -1,0 +1,6 @@
+.gameHistory{
+    background-color: darkorchid;
+    display: flex;
+    flex-direction: column;
+
+}

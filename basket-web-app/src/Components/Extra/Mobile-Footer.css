@@ -1,0 +1,77 @@
+.MobileFooter {
+    display: none;
+    background: rgb(73, 61, 78);;
+}
+
+.Arrow {
+    width: 40px;
+    height: 40px;
+    /*background: #FFE9D6;*/
+}
+
+.ArrowSecond {
+    width: 40px;
+    height: 40px;
+}
+
+.ProjectStatic {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 3vh;
+}
+
+.NavigationButtons {
+    display: flex;
+    flex-direction: row;
+    padding-left: 7vw;
+}
+
+.TextBlock {
+    display: flex;
+}
+
+.ant-select-arrow span svg{
+    width: 2em !important;
+    height: 2em !important;
+}
+
+@media (max-width: 1270px) {
+
+    .MobileFooter {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .TextBlock {
+        margin-left: 30vw;
+    }
+
+    .ProjectStatic {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .DesktopFooter {
+        display: none;
+    }
+}
+
+@media (max-width: 650px) {
+    .TextBlock {
+        margin-left: 11vw;
+    }
+}
+
+@media(max-width: 414px) {
+    .MobileFooter {
+        /*width: 90%;*/
+    }
+
+    .TextBlock {
+        margin-left: 0;
+    }
+
+    .ProjectStatic {
+        margin: 0;
+    }
+}

@@ -1,0 +1,16 @@
+.leftMenu {
+    display: flex;
+    flex-direction: column;
+    background-color: bisque;
+}
+
+.leftMenuItem {
+    background-color: cornflowerblue;
+    text-decoration: none;
+    color: black;
+    transition: background-color 0.3s;
+}
+
+.leftMenuItem:hover {
+    background-color: aliceblue;
+}

@@ -1,0 +1,15 @@
+.gameHistoryPost {
+    background-color: seagreen;
+    color: black;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    padding: 10px;
+}
+
+.gameHistoryPost:hover {
+    background-color: aliceblue;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}

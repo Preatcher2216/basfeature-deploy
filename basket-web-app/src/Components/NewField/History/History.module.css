@@ -1,0 +1,157 @@
+.History {
+    display: flex;
+
+    background-color: rgb(73, 61, 78);
+    align-items: center;
+    padding-left: 10vw;
+    padding-right: 5vw;
+    padding-bottom: 5vh;
+}
+
+.HistoryBlock {
+    display: flex;
+    flex-direction: column;
+}
+
+.HistoryBox {
+    width: 1218px;
+    height: 357px;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+
+    border: 3px solid #FFACBB;
+    box-sizing: border-box;
+    border-radius: 22px;
+}
+
+.HistoryBoxWrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+.HistoryText {
+    display: flex;
+    justify-content: space-between;
+}
+
+.HistoryLeft {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+
+    color: #FFACBB;
+
+}
+
+.HistoryRight {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFACBB;
+}
+
+.HistoryBtn {
+    width: 337px;
+    /*height: 60px;*/
+
+    margin-left: 3vw;
+    padding: 10px;
+    border: 2px solid #FFE9D6;
+    box-sizing: border-box;
+    border-radius: 7px;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 42px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    color: #FFE9D6;
+    background: transparent;
+}
+
+.HistoryBoxText {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+
+    color: #FFACBB;
+}
+
+.HistorySuccess {
+    border: 2px solid #66FF9A;
+    box-sizing: border-box;
+    border-radius: 16px;
+    padding: 10px;
+}
+
+.HistoryFail {
+    border: 2px solid #FF4D4D;
+    box-sizing: border-box;
+    border-radius: 16px;
+    padding: 10px;
+}
+
+.HistoryCancel {
+    border: 2px solid #FF4D4D;
+    box-sizing: border-box;
+    border-radius: 16px;
+    padding: 10px;
+
+    color: #FF4D4D;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+@media (max-width: 1800px) {
+    .History {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 1600px) {
+    .HistoryBox {
+        width: 1000px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .HistoryBox {
+        width: 800px;
+    }
+}
+
+@media (max-width: 768px) {
+    .History {
+        flex-direction: column;
+    }
+
+    .HistoryBox {
+        width: 700px;
+    }
+
+    .HistoryBtn {
+        margin-top: 3vh;
+    }
+}

@@ -1,0 +1,20 @@
+.wrapper {
+    position: absolute;
+    width: 300px;
+    height: 500px;
+    background-color: white;
+    left: 45vw;
+    top: 20px;
+}
+ .header{
+    width: 100%;
+}
+.closeBtn{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.body{
+    position: relative;
+    display: flex;
+}

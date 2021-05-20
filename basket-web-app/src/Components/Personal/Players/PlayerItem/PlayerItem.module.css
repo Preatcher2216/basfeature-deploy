@@ -1,0 +1,12 @@
+.playerNames {
+
+}
+
+.playerNamesItem {
+    text-decoration: none;
+    color: black;
+}
+
+.playerNamesItem:hover {
+    background-color: lightpink;
+}

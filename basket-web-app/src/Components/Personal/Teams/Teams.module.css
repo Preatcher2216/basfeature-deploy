@@ -1,0 +1,19 @@
+.contentLocal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+.title{
+    text-align: center;
+
+}
+.teamsName{
+    background-color: orchid;
+    margin: 5px;
+
+}
+.addTeam {
+
+}

@@ -1,0 +1,215 @@
+.TeamMembers {
+    display: flex;
+    background: #FFE9D6;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.Wrapper {
+    display: flex;
+
+    margin: auto;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+
+.LeftSide {
+    display: flex;
+    flex-direction: column;
+}
+
+.PersonBlock {
+    display: flex;
+    margin-bottom: 3vh;
+    /*margin-top: 1vh;*/
+}
+
+.ImgBlock {
+    display: flex;
+    flex-direction: column;
+}
+
+.Img {
+    width: 319px;
+    height: 351px;
+}
+
+.PersonName {
+    background: #775A94;
+    border-radius: 16px;
+    padding: 10px;
+    margin-top: -4vh;
+
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+
+    color: #FFFFFF;
+}
+
+.MessageImg {
+    margin-left: 3vw;
+}
+
+.RightSide {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10vh;
+}
+
+.MessageBox {
+    position: relative;
+    width: 435px;
+    height: 217px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 2;
+    margin-left: 2vw;
+
+    background: linear-gradient(214.53deg, #635189 5.55%, #B174B1 42.84%, #FFABBA 96.18%);
+    border-radius: 26px;
+}
+
+.MessageText {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+
+    color: #FFFFFF;
+
+}
+
+.MessageBtn {
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 16px;
+    background: transparent;
+
+    width: 235.95px;
+    height: 43.2px;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.MessageBtn:focus {
+    outline: none;
+}
+
+.MessageBtn:hover {
+    color: #775A94;
+    background: #FFF5ED;
+}
+
+.PieceMessage {
+    margin-top: -3vh;
+    margin-left: 2vw;
+    z-index: 1;
+}
+
+.Right {
+    margin-right: 5vw;
+}
+
+.PieceMessageMiddle {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -10vh;
+    margin-right: 5vh;
+}
+
+.MyInfo {
+    background: #FFF5ED;
+}
+
+.MessageBlock {
+
+}
+
+@media (max-width: 1800px) {
+    .MessageBox {
+        width: 400px;
+        height: 170px;
+    }
+}
+
+@media (max-width: 1600px) {
+    .MessageBox {
+        width: 350px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .MessageBox {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+        justify-content: flex-end;
+        margin-top: 7vh;
+    }
+
+    .MessageBtn {
+        visibility: visible;
+        background: #775A94;
+        margin-top: 8vh;
+        margin-left: -3vw;
+        width: 150px;
+        padding: 10px;
+    }
+
+    .PieceMessageMiddle {
+        visibility: hidden;
+    }
+
+    .PieceMessage {
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 600px) {
+    .Wrapper {
+        flex-direction: column;
+    }
+
+    .MessageBtn {
+        margin-left: -9vw;
+    }
+}
+
+@media (max-width: 450px) {
+    .MessageBtn {
+        padding: 0;
+        width: 100px;
+    }
+
+    .MessageBlock {
+        display: none;
+    }
+
+    .RightSide {
+        margin-top: 0;
+    }
+}
