@@ -1,0 +1,13 @@
+
+/.idea/
+/Server/__pycache__/
+
+/Server/templates/log.html
+/Server/templates/probasket.html
+
+/Server/log/log.log
+
+/Server/test.py
+
+/Server/image/*
+!/Server/image/README.md
