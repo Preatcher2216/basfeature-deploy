@@ -143,7 +143,7 @@ const TeamMembers = ({}) => {
                     <div className={Classes.PersonBlock}>
                         <div className={Classes.MessageBlock}>
                             <div className={`${Classes.MessageBox} ${Classes.Right}`}>
-                                <span className={Classes.MessageText}>Здравствуйте, я люблю пиццу!</span>
+                                <span className={Classes.MessageText}>Здравствуйте, я технический писатель!</span>
                                 <button onClick={showInfoRight} className={Classes.MessageBtn}>Контакты</button>
                             </div>
                             <div className={Classes.PieceMessageMiddle}>
@@ -158,7 +158,7 @@ const TeamMembers = ({}) => {
                     <div className={Classes.PersonBlock}>
                         <div className={Classes.MessageBlock}>
                             <div className={`${Classes.MessageBox} ${Classes.Right}`}>
-                                <span className={Classes.MessageText}>Привет. Я технический писатель.</span>
+                                <span className={Classes.MessageText}>Привет. Я второй технический писатель.</span>
                                 <button onClick={showInfoRight} className={Classes.MessageBtn}>Контакты</button>
                             </div>
                             <div className={Classes.PieceMessageMiddle}>
