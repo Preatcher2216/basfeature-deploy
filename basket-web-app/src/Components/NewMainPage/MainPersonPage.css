@@ -198,7 +198,7 @@
     border: 2px #64518A solid;
     border-radius: 10px;
     background: #FFF5ED;
-    color: rgba(100, 81, 138, 0.5);
+    color: #64518A;
 }
 
 .TitleTeamInput:focus {
@@ -427,7 +427,7 @@
     border: 2px #64518A solid;
     border-radius: 10px;
     background: #FFF5ED;
-    color: rgba(100, 81, 138, 0.5);
+    color: #64518A;
 }
 
 .CommentsForTeamTextArea:focus {

@@ -297,7 +297,7 @@ circle:hover {
 
 @media (max-width: 1150px) {
     .Wrapper {
-        width: 200px;
+        /*width: 200px;*/
     }
 }
 
