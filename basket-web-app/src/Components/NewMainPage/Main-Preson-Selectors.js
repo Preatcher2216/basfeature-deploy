@@ -37,4 +37,7 @@ export const getListOfGame= (state) => (state.backendStatistics.listOfGame)
 export const getChosenTeamID= (state) => (state.backendStatistics.chosenTeamID)
 export const getOneGame= (state) => (state.backendStatistics.oneGame)
 export const getEmail= (state) => (state.backendStatistics.email)
+export const getMyPlayersForGame= (state) => (state.chooseTeamReducer.myPlayersForGame)
+export const getEnemyPlayersForGame= (state) => (state.chooseTeamReducer.enemyPlayersForGame)
+export const getIsMyTeam2= (state) => (state.gameStatistic.isMyTeam)
 

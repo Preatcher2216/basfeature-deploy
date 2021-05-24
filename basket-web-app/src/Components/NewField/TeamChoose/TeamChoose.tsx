@@ -5,7 +5,8 @@ import './TeamChoose.css'
 import {useDispatch, useSelector} from "react-redux";
 import {getAddedTeams} from "../../NewMainPage/Main-Preson-Selectors";
 import {
-    gameIsStart,
+    clearClicks, enemyPlayerObjForGame,
+    gameIsStart, myPlayerObjForGame,
     setEnemyTeamValue,
     setMyTeamValue,
 } from "../../../Redux/Redusers/Game-Window/choose-team-reducer";
@@ -49,7 +50,9 @@ const TeamChoose: React.FC<TeamChoosePropsType> = ({}) => {
     const startGame =  () => {
         // setIsGame(prev => prev = true)
         dispatch(gameIsStart(isGame))
-        console.log('Game is started')
+        dispatch(myPlayerObjForGame())
+        dispatch(enemyPlayerObjForGame())
+        dispatch(clearClicks())
     }
 
     function onChange(value: any) {
@@ -57,17 +60,13 @@ const TeamChoose: React.FC<TeamChoosePropsType> = ({}) => {
     }
     function onEnemyChange(value: any) {
         setChosenEnemyTeam(value)
-        console.log(`selected ${value}`);
     }
 
     function onBlur() {
-        console.log('blur');
     }
     function onFocus() {
-        console.log('focus');
     }
     function onSearch(val: any) {
-        console.log('search:', val);
     }
 
     const styles = {

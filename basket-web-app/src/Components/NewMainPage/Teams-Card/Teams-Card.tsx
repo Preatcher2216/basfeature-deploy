@@ -23,7 +23,7 @@ const TeamsCard: React.FC<PropsType> = ({teamTitle, teamPlayers,isMyTeam,teamNum
 
     const numbersElements = teamNumbers.map((elem: any) => {
         return(
-            <span className='TeamsCardPlayerNumber'>{elem}</span>
+            <span className='TeamsCardPlayerNumber'>{elem.playerNumber}</span>
         )
     })
 

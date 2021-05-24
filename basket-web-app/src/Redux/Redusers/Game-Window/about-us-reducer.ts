@@ -48,7 +48,7 @@ const aboutUs = (state = initialState, action: any): InitialStateType => {
     }
 }
 
-export const setTeamMember = (teamMemberName: string) => ({type: SET_TEAM_MEMBER, teamMemberName: teamMemberName})
+export const setTeamMember = (teamMemberName: string) => ({type: SET_TEAM_MEMBER, teamMemberName})
 export const clearSelectTeamMember = () => ({type:CLEAR_SELECT_TEAM_MEMBER})
 
 export default aboutUs;

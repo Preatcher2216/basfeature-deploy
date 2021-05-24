@@ -48,7 +48,7 @@
 .TeamTitle {
     /*margin-top: 3vh;*/
     margin-left: 1vw;
-    width: 12vw;
+    width: 230px;
     font-style: normal;
     font-weight: 300;
     font-size: 36px;
@@ -260,10 +260,20 @@ circle:hover {
     cursor: pointer;
 }
 
+@media (min-width: 1810px) {
+    .MainElements {
+        margin: auto;
+    }
+}
+
 @media (max-width: 1800px) {
+    .MainElements {
+        margin: auto;
+    }
+
     .FieldMain {
         margin: 0;
-        width: 70%;
+        width: 60%;
     }
 
     .MainElements {
@@ -285,11 +295,18 @@ circle:hover {
     }
 }
 
+@media (max-width: 1150px) {
+    .Wrapper {
+        width: 200px;
+    }
+}
+
 @media (max-width: 1024px) {
     .FieldMain {
         position: absolute;
         margin-top: 30vh;
-        margin-left: 15vw;
+        margin-left: 0 !important;
+        width: 90%;
     }
 
     .FieldWrapper {
@@ -331,11 +348,12 @@ circle:hover {
     .FieldMain {
         position: absolute;
         margin-top: 30vh;
-        margin-left: 15vw;
+        margin-left: 0 !important;
+        width: 90%;
     }
-
     .FieldWrapper {
         flex-direction: column;
+        margin-bottom: 5vh;
     }
 
     .Wrapper {
@@ -364,6 +382,20 @@ circle:hover {
     }
 
     .MessageBtn {
-        margin-top: 3vh;
+        margin-top: 17vh;
+        display: none !important;
+    }
+}
+
+@media (max-width: 510px) {
+    .FieldMain {
+        margin: 0;
+        width: 90%;
+    }
+
+    .FieldMain {
+        position: absolute;
+        margin-top: 30vh;
+        /*margin-left: 15vw;*/
     }
 }

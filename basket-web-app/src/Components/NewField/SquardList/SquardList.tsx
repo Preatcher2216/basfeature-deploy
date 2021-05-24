@@ -10,6 +10,7 @@ import {
 import PlayerItem from "./Player-Item/Player-Item";
 import EnemyItem from "./Enemy-Item/Enemy-Item";
 import {setSquardActive} from "../../../Redux/Redusers/Game-Window/game-statistic";
+import {setSelectEnemyTeamObj, setSelectMyTeamObj} from "../../../Redux/Redusers/Game-Window/choose-team-reducer";
 
 type SquardListPropsType = {}
 
@@ -21,11 +22,21 @@ const SquardList: React.FC<SquardListPropsType> = ({}) => {
     const enemyTeamTitle = useSelector(getSelectEnemyTeamTitle)
     const urlResponse = useSelector(getUrlResponse)
 
+    const dispatch = useDispatch()
+
     const selectMyTeam = myTeam.filter((el:any) => el.teamTitle === myTeamTitle)
     const selectEnemyTeam = enemyTeam.filter((el:any) => el.teamTitle === enemyTeamTitle )
 
+    useEffect(() => {
+        dispatch(setSelectMyTeamObj(selectMyTeam))
+    }, [selectMyTeam])
+
+    useEffect(() => {
+        dispatch(setSelectEnemyTeamObj(selectEnemyTeam))
+    }, [selectEnemyTeam])
+
+
     const onClick = () => {
-        alert('Hello')
     }
 
     let dynamicMyTeamTitle: any
@@ -40,16 +51,14 @@ const SquardList: React.FC<SquardListPropsType> = ({}) => {
 
     const myTeamPlayers = selectMyTeam.map((el:any) => {
         return(
-            <PlayerItem teamNumbers={el.teamNumbers} isMyTeam={el.isMyTeam} isClicked={false} teamNames={el.teamPlayers} />
+            <PlayerItem teamNumbers={el.teamNumbers} teamNames={el.teamPlayers} teamTitle={el.teamTitle} />
         )
     })
     const enemyTeamPlayers = selectEnemyTeam.map((el:any) => {
         return(
-            <EnemyItem teamNumbers={el.teamNumbers} isMyTeam={el.isMyTeam} isClicked={false} teamNames={el.teamPlayers} />
+            <EnemyItem teamNumbers={el.teamNumbers} isMyTeam={el.isMyTeam} teamNames={el.teamPlayers} teamTitle={el.teamTitle} />
         )
     })
-    console.log('myTeamPlayers')
-    console.log(myTeamPlayers)
     return (
         <div className={Classes.SquardList}>
             <span className={Classes.Title}>Выберите основной состав команд</span>

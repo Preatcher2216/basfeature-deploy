@@ -91,6 +91,11 @@
     margin-bottom: 10vh;
 }
 
+.Games {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
 @media (max-width: 600px) {
     .EmailWrapper {
         flex-direction: column;

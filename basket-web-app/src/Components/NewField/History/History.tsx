@@ -25,7 +25,7 @@ import {addGameThunk} from "../../../Redux/Redusers/Game-Window/backend-statisti
 type HistoryPropsType = {}
 
 const History: React.FC<HistoryPropsType> = ({}) => {
-
+    const [icCrutch, setIsCrutch] = useState(false)
     const [tableUrl, setTableUrl] = useState('')
     const [isStart, setIsStart] = useState(false)
     const [crutch, setCrutch] = useState(0)
@@ -47,13 +47,13 @@ const History: React.FC<HistoryPropsType> = ({}) => {
 
     const finishMatch = (e: any) => {
         dispatch(gameIsStart(isStart))
-         
         dispatch(addGameThunk(myTeamTitle, enemyTeamTitle, JSON.stringify(players1), JSON.stringify(throws), personEmail, apiKey, ))
         dispatch(clearHistory())
         dispatch(clearActiveMyPlayersForGame())
         dispatch(clearActiveEnemyPlayersForGame())
         dispatch(clearFieldPiece())
         dispatch(clearThrows())
+        setIsCrutch((prec) => !prec)
     }
 
 
@@ -66,14 +66,8 @@ const History: React.FC<HistoryPropsType> = ({}) => {
 
     console.log('gameHistory')
     console.log(gameHistory)
-
-
-    console.log('tableUrl')
-    console.log(tableUrl)
-
     useEffect(() => {
         setCrutch((prev) => prev + 1)
-        console.log(`History count ${crutch}`)
     }, [gameHistory])
 
     useEffect(() => {
@@ -82,8 +76,6 @@ const History: React.FC<HistoryPropsType> = ({}) => {
             if(history[i].sector === +deleteSector && history[i].playerNumber === +deletePlayerNumber && history[i].action === deleteAction)
                 buffArr.splice(i,1)
         }
-        console.log('history')
-        console.log(history)
     }, [gameHistory])
 
     if (history.length != gameHistory.length)

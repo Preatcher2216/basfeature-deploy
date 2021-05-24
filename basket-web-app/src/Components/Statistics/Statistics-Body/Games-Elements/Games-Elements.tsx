@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import Classes from './Games-Elements.module.css'
 import {useDispatch, useSelector} from "react-redux";
 import {findGame, getStatisticsOfOneGameThunk} from "../../../../Redux/Redusers/Game-Window/backend-statistic";
@@ -18,6 +18,11 @@ const GamesElements: React.FC<GamesElementsType> = ({team1, team2, date}) => {
     const apiKey = useSelector(getApiKey)
     const selectGameInfo = useSelector(getOneGame)
     const dispatch = useDispatch()
+    const childRef = useRef<HTMLDivElement | null>(null)
+
+    useEffect(() => {
+
+    }, [childRef])
 
     const showTableUrl = ((e: any) => {
          
@@ -33,7 +38,7 @@ const GamesElements: React.FC<GamesElementsType> = ({team1, team2, date}) => {
         window.open(selectGameInfo)
     }
     return (
-        <div className={Classes.MainWrapper} onClick={showTableUrl}>
+        <div className={Classes.MainWrapper} onClick={showTableUrl} ref={childRef}>
             <div className={Classes.Text}>{team1}</div>
             <div className={Classes.Text}>{team2}</div>
             <div className={Classes.Text}>{date}</div>

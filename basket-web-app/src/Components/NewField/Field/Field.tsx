@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 import Classes from './Field.module.css'
 import './Field.css'
 import {NavLink} from "react-router-dom";
@@ -11,29 +11,35 @@ import {
     getSelectEnemyTeamTitle,
     getHistory,
     getFinalEnemyPlayersForGame,
-    getPiecePass, getActionCounter
+    getPiecePass, getActionCounter, getMyPlayersForGame, getEnemyPlayersForGame, getIsMyTeam2
 } from '../../NewMainPage/Main-Preson-Selectors';
 import PopupPlayersChoose from "../../Modal/Players-Choose/Popup-Players-Choose";
 import SuccessImg from './../../../Images/SuccessAction.svg'
 import FailImg from './../../../Images/FailAction.svg'
 import {
     addActionToFieldPiece,
-    addThrows,
+    addThrows,  chooseTeam1,
     createStatistic,
     setFieldPart,
     setGameAction
 } from "../../../Redux/Redusers/Game-Window/game-statistic";
 import {
+    myPlayerObjForGame,
     setActiveEnemyPlayersForGame,
     setActiveMyPlayersForGame
 } from "../../../Redux/Redusers/Game-Window/choose-team-reducer";
 import AllPassStatistics from "../../Game-Window/Field/Statistics/All-Pass-Statistics";
+import PlayerItem from "../SquardList/Player-Item/Player-Item";
+import MyElements from "./My-Elements/My-Element";
+import EnemyElements from "./Enemy-Elements/Enemy-Element";
 // import ChangePopup from "./Change-Popup/Change-Popup";
 
 type FieldPropsType = {}
 
+// @ts-ignore
 const Field: React.FC<FieldPropsType> = ({}) => {
 
+    const [crutch1, setCrutch1] = useState(false)
     const [show, setShow] = useState(false)
     const [isChangeWindow, setIsChangeWindow] = useState(false)
     const [isChangeWindowEnemy, setIsChangeWindowEnemy] = useState(false)
@@ -48,6 +54,15 @@ const Field: React.FC<FieldPropsType> = ({}) => {
     const historyUpdate = useSelector(getHistory)
     const gameStatistics = useSelector(getPiecePass)
     const actionCounter = useSelector(getActionCounter)
+    const myPlayersForGame = useSelector(getMyPlayersForGame)
+    const enemyPlayersForGame = useSelector(getEnemyPlayersForGame)
+    const isMyTeam = useSelector(getIsMyTeam2)
+    const example = useRef<string>('')
+    console.log('isMyTeam')
+    console.log(isMyTeam)
+
+
+
 
     const dispatch = useDispatch()
 
@@ -58,9 +73,15 @@ const Field: React.FC<FieldPropsType> = ({}) => {
         setCrutch(crutch + 1)
     }, [])
 
+
+    let team:string
     useEffect(() => {
-        setCrutch(crutch + 1)
-    }, [historyUpdate])
+        example.current = isMyTeam ? myTeamTitle : enemyTeamTitle
+    }, [isMyTeam])
+
+    console.log('example.current')
+    // @ts-ignore
+    console.log(example.current)
 
     const showPass = (e: any) => {
          
@@ -77,25 +98,28 @@ const Field: React.FC<FieldPropsType> = ({}) => {
         setIsChangeWindowEnemy(true)
     }
 
-    const closeResultPassWindow = useCallback((e: any) => {
+
+    const closeResultPassWindow = (e: any) => {
          
         setShow(false);
         const action = e.currentTarget.outerText === 'Успех' ? true : false
+        dispatch(createStatistic('player', example.current))
         dispatch(setGameAction(action))
         dispatch(addThrows())
         dispatch(addActionToFieldPiece())
-        dispatch(createStatistic('player', 'testTeam'))
-    }, [])
+        dispatch(chooseTeam1())
+    }
 
-    const closeUnResultPassWindow = useCallback((e: any) => {
+    const closeUnResultPassWindow = (e: any) => {
          
         setShow(false);
         const action = e.currentTarget.outerText === 'Неудача' ? false : true
+        dispatch(createStatistic('player', example.current))
         dispatch(setGameAction(action))
         dispatch(addThrows())
         dispatch(addActionToFieldPiece())
-        dispatch(createStatistic('player', 'testTeam'))
-    }, [])
+        dispatch(chooseTeam1())
+    }
 
     const closeBtn = useCallback(() => {
         setShow(false);
@@ -109,8 +133,19 @@ const Field: React.FC<FieldPropsType> = ({}) => {
         setStatistics(true)
     }
 
-    const changeMyTeam = myTeam.filter((el: any) => myTeam.indexOf(el) > 4)
+    const myPlayersForGameElements = myPlayersForGame.map((el:any) => {
+        return(
+            <MyElements teamNumbers={el.teamNumbers}/>
+        )
+    })
 
+    const enemyPlayersForGameElements = enemyPlayersForGame.map((el:any) => {
+        return(
+            <EnemyElements teamNumbers={el.teamNumbers}/>
+        )
+    })
+
+    const changeMyTeam = myTeam.filter((el: any) => myTeam.indexOf(el) > 4)
     return (
         <div className={Classes.Field}>
             <div className={Classes.MainElements}>
@@ -119,7 +154,7 @@ const Field: React.FC<FieldPropsType> = ({}) => {
                         <span className={Classes.TeamTitle}>{myTeamTitle}</span>
                         <div className={Classes.MyTeams}>
                             <div className={Classes.MyTeamElements}>
-                                {textMyeTeam}
+                                {myPlayersForGameElements}
                             </div>
                         </div>
                     </div>
@@ -202,7 +237,7 @@ const Field: React.FC<FieldPropsType> = ({}) => {
                         <span className={`${Classes.TeamTitle} ${Classes.TeamTitleEnemy}`}>{enemyTeamTitle}</span>
                         <div className={Classes.MyTeams}>
                             <div className={Classes.MyTeamElements}>
-                                {finalEnemyTeam}
+                                {enemyPlayersForGameElements}
                             </div>
                             {/*<div className={`${Classes.MyPlayersChange} ${Classes.MyPlayersChangeEnemy}`} onClick={showChangeWindowEnemy}>Замена</div>*/}
                         </div>

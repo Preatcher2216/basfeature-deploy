@@ -13,6 +13,7 @@ const CLEAR_FIELD_PIECE = 'CLEAR_FIELD_PIECE'
 const CLEAR_THROWS = 'CLEAR_THROWS'
 const ADD_ACTION_TO_FIELD_PIECE = 'ADD_ACTION_TO_FIELD_PIECE'
 const SET_SQUARD_ACTIVE = 'SET_SQUARD_ACTIVE'
+const CHOOSE_TEAM1 = 'CHOOSE_TEAM1'
 
 type allPassType = {
     playerNumber: number
@@ -93,7 +94,9 @@ let initialState = {
 
     deleteAction: '',
     deletePlayerNumber: 0,
-    deleteSector: 0
+    deleteSector: 0,
+
+    isMyTeam: true as boolean | undefined
 }
 
 export type InitialStateType = typeof initialState
@@ -106,7 +109,7 @@ const gameStatistic = (state = initialState, action: any): InitialStateType => {
             let objectArray = action.myTeamArr.map((el: any, index: any) => {
                 return {
                     id: count++,
-                    number: el,
+                    number: el.playerNumber,
                     // first_name: action.teamNames[index],
                     full_name: action.teamNames[index],
                     team: 1
@@ -121,7 +124,7 @@ const gameStatistic = (state = initialState, action: any): InitialStateType => {
             let objectEnemyArray = action.enemyTeamArr.map((el: any, index: any) => {
                 return {
                     id: enemyCount++,
-                    number: el,
+                    number: el.playerNumber,
                     full_name: action.teamNames[index],
                     // last_name: action.teamNames[index],
                     team: 2
@@ -234,6 +237,21 @@ const gameStatistic = (state = initialState, action: any): InitialStateType => {
                 ...state,
                 squadActive: action.active
             }
+        case CHOOSE_TEAM1:
+            for(let i =0; i< state.myPlayerTeam.length; i++) {
+                if(state.myPlayerTeam[i].number === +state.selectPlayer){
+                    state.isMyTeam = true
+                }
+            }
+            for(let i =0; i< state.enemyPlayerTeam.length; i++) {
+                if(state.enemyPlayerTeam[i].number === +state.selectPlayer){
+                    state.isMyTeam = false
+                }
+            }
+            return {
+                ...state,
+                isMyTeam: state.isMyTeam
+            }
         default :
             return state;
     }
@@ -268,6 +286,7 @@ export const clearFieldPiece = () => ({type: CLEAR_FIELD_PIECE})
 export const clearThrows = () => ({type: CLEAR_THROWS})
 export const addActionToFieldPiece = () => ({type: ADD_ACTION_TO_FIELD_PIECE})
 export const setSquardActive = (active: boolean) => ({type: SET_SQUARD_ACTIVE, active: active })
+export const chooseTeam1 = () => ({type: CHOOSE_TEAM1})
 
 
 

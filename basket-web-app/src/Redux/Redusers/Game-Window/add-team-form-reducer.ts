@@ -155,14 +155,12 @@ const addTeamForm = (state = initialState, action: any): InitialStateType => {
                 teamNumbers: Array<any>
                 teamPlayers: Array<any>
                 isMyTeam: boolean
-                isClicked: boolean
             }
             const newTeam: NewTeamType = {
                 teamTitle: state.teamTitle,
                 teamNumbers: [],
                 teamPlayers: [],
                 isMyTeam: state.isMyTeam,
-                isClicked: false
             }
 
             state.teamsCount= action.teamsCount
@@ -171,7 +169,7 @@ const addTeamForm = (state = initialState, action: any): InitialStateType => {
                 if(Number.isInteger(+state.inputFormArr[i].value)){
                     // @ts-ignore
                     playerNumber = +state.inputFormArr[i].value
-                        newTeam.teamNumbers.push(playerNumber)
+                        newTeam.teamNumbers.push({playerNumber: playerNumber, isClicked: false})
                 }
                 else {
                     playerName = state.inputFormArr[i].value

@@ -53,3 +53,12 @@
     transform: translatey(3px);
 }
 
+@media (max-width: 510px) {
+    .ant-select-selector {
+        width: auto !important;
+    }
+
+    .ant-select-selection-placeholder {
+        white-space: normal !important;
+    }
+}

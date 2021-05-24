@@ -11,7 +11,8 @@ const initialState = {
     urlResponse: [] as Array<any>,
     email: '',
     chosenTeamID: '',
-    oneGame: ''
+    oneGame: '',
+    childRef: ''
 }
 type InitialStateType = typeof initialState
 
@@ -65,7 +66,7 @@ export const findGame = (team1: string, team2: string, date: string) => ({
     date: date
 })
 export const setOneGame = (date: any) => ({type: SET_ONE_GAME, payload: date})
-
+export const setRef = () => {}
 
 export const getListOfGamesThunk = (apiKey: string) => {
     return (dispatch: any) => {

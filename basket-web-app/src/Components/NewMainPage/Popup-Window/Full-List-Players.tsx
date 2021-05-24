@@ -33,7 +33,7 @@ const FullListPlayers: React.FC<FullListPlayersPropsType> = ({setlistPlayers, li
 
          numbers = selectTeam[0].teamNumbers.map((elem: any) => {
             return(
-                <span className='numbers'>{elem}</span>
+                <span className='numbers'>{elem.playerNumber}</span>
             )
         })
     }

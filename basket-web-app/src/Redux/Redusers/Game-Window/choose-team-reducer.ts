@@ -11,6 +11,16 @@ const SET_ACTIVE_MY_PLAYERS_FOR_GAME = 'SET_ACTIVE_MY_PLAYERS_FOR_GAME'
 const SET_ACTIVE_ENEMY_PLAYERS_FOR_GAME = 'SET_ACTIVE_ENEMY_PLAYERS_FOR_GAME'
 const CLEAR_ACTIVE_MY_PLAYERS_FOR_GAME = 'CLEAR_ACTIVE_MY_PLAYERS_FOR_GAME'
 const CLEAR_ACTIVE_ENEMY_PLAYERS_FOR_GAME = 'CLEAR_ACTIVE_ENEMY_PLAYERS_FOR_GAME'
+const SET_SELECT_MY_TEAM_OBJ = 'SET_SELECT_MY_TEAM_OBJ'
+const SET_SELECT_ENEMY_TEAM_OBJ = 'SET_SELECT_ENEMY_TEAM_OBJ'
+const CHANGE_CLICKED_ENEMY_PLAYERS = 'CHANGE_CLICKED_ENEMY_PLAYERS'
+const CHANGE_CLICKED_MY_PLAYERS = 'CHANGE_CLICKED_MY_PLAYERS'
+const CLEAR_CLICKS = 'CLEAR_CLICKS'
+const MY_PLAYER_OBJ_FOR_GAME = 'MY_PLAYER_OBJ_FOR_GAME'
+const ENEMY_PLAYER_OBJ_FOR_GAME = 'ENEMY_PLAYER_OBJ_FOR_GAME'
+const MY_PLAYER_CLICK_IN_GAME = 'MY_PLAYER_CLICK_IN_GAME'
+const ENEMY_PLAYER_CLICK_IN_GAME = 'ENEMY_PLAYER_CLICK_IN_GAME'
+
 
 let initialState = {
     selectMyTeam: [] as Array<any>,
@@ -26,13 +36,19 @@ let initialState = {
     indexArrForGame: [] as any,
     indexArrEnemyForGame: [] as any,
     finalMyPlayersForGame: [] as any,
-    finalEnemyPlayersForGame: [] as any
+    finalEnemyPlayersForGame: [] as any,
+
+    selectMyTeamObj: null as any,
+    selectEnemyTeamObj: null as any,
+
+    myPlayersForGame: [] as Array<any>,
+    enemyPlayersForGame: [] as Array<any>,
+
 }
 
 export type InitialStateType = typeof initialState
 
 const chooseTeamReducer = (state = initialState, action: any): InitialStateType => {
-     
     switch (action.type) {
         case SET_MY_TEAM_VALUE:
             return {
@@ -89,7 +105,7 @@ const chooseTeamReducer = (state = initialState, action: any): InitialStateType 
                 indexArrEnemyForGame: state.indexArrEnemyForGame
             }
         case SET_ACTIVE_MY_PLAYERS_FOR_GAME:
-             
+
             for (let i = 0; i < state.arrayOfMyPlayers.length; i++) {
                 for (let j = 0; j < state.arrayOfMyPlayers.length; j++) {
                     if (state.arrayOfMyPlayers[i].props.id === state.indexArrForGame[j]) {
@@ -102,7 +118,7 @@ const chooseTeamReducer = (state = initialState, action: any): InitialStateType 
                 finalMyPlayersForGame: state.finalMyPlayersForGame.sort((a: number, b: number) => a - b)
             }
         case SET_ACTIVE_ENEMY_PLAYERS_FOR_GAME:
-             
+
             for (let i = 0; i < state.arrayOfEnemyPlayers.length; i++) {
                 for (let j = 0; j < state.arrayOfEnemyPlayers.length; j++) {
                     if (state.arrayOfEnemyPlayers[i].props.id === state.indexArrEnemyForGame[j]) {
@@ -133,6 +149,123 @@ const chooseTeamReducer = (state = initialState, action: any): InitialStateType 
                 ...state,
                 finalEnemyPlayersForGame: state.finalEnemyPlayersForGame,
                 indexArrEnemyForGame: state.indexArrEnemyForGame
+            }
+        case SET_SELECT_MY_TEAM_OBJ:
+            return {
+                ...state,
+                selectMyTeamObj: action.myTeam
+            }
+        case SET_SELECT_ENEMY_TEAM_OBJ:
+            return {
+                ...state,
+                selectEnemyTeamObj: action.enemyTeam
+            }
+        case CHANGE_CLICKED_MY_PLAYERS:
+            for (let i = 0; i < state.selectMyTeamObj[0].teamNumbers.length; i++) {
+                if (state.selectMyTeamObj[0].teamNumbers[i].playerNumber === action.id) {
+                    state.selectMyTeamObj[0].teamNumbers[i].isClicked = !state.selectMyTeamObj[0].teamNumbers[i].isClicked
+                }
+            }
+            return {
+                ...state,
+                selectMyTeamObj: state.selectMyTeamObj
+            }
+        case MY_PLAYER_CLICK_IN_GAME:
+            for (let i = 0; i < state.myPlayersForGame[0].teamNumbers.length; i++) {
+                if (state.myPlayersForGame[0].teamNumbers[i].playerNumber === action.id) {
+                    state.myPlayersForGame[0].teamNumbers[i].isClicked = !state.myPlayersForGame[0].teamNumbers[i].isClicked
+                }
+                else {
+                    state.myPlayersForGame[0].teamNumbers[i].isClicked = false
+                }
+            }
+            for (let i = 0; i < state.enemyPlayersForGame[0].teamNumbers.length; i++) {
+                state.enemyPlayersForGame[0].teamNumbers[i].isClicked = false
+            }
+            return {
+                ...state,
+                myPlayersForGame: state.myPlayersForGame,
+                enemyPlayersForGame: state.enemyPlayersForGame,
+            }
+        case CHANGE_CLICKED_ENEMY_PLAYERS:
+            for (let i = 0; i < state.selectEnemyTeamObj[0].teamNumbers.length; i++) {
+                if (state.selectEnemyTeamObj[0].teamNumbers[i].playerNumber === action.id) {
+                    state.selectEnemyTeamObj[0].teamNumbers[i].isClicked = !state.selectEnemyTeamObj[0].teamNumbers[i].isClicked
+                }
+            }
+            return {
+                ...state,
+                selectEnemyTeamObj: state.selectEnemyTeamObj
+            }
+        case ENEMY_PLAYER_CLICK_IN_GAME:
+            for (let i = 0; i < state.enemyPlayersForGame[0].teamNumbers.length; i++) {
+                if (state.enemyPlayersForGame[0].teamNumbers[i].playerNumber === action.id) {
+                    state.enemyPlayersForGame[0].teamNumbers[i].isClicked = !state.enemyPlayersForGame[0].teamNumbers[i].isClicked
+                }
+                else {
+                    state.enemyPlayersForGame[0].teamNumbers[i].isClicked = false
+                }
+            }
+            for (let i = 0; i < state.myPlayersForGame[0].teamNumbers.length; i++) {
+                state.myPlayersForGame[0].teamNumbers[i].isClicked = false
+            }
+            return {
+                ...state,
+                enemyPlayersForGame: state.enemyPlayersForGame,
+                myPlayersForGame: state.myPlayersForGame
+            }
+        case CLEAR_CLICKS:
+
+            try {
+                for (let i = 0; i < state.selectEnemyTeamObj[0].teamNumbers.length; i++) {
+                    state.selectEnemyTeamObj[0].teamNumbers[i].isClicked = false
+                }
+                for (let i = 0; i < state.selectMyTeamObj[0].teamNumbers.length; i++) {
+                    state.selectMyTeamObj[0].teamNumbers[i].isClicked = false
+                }
+            }
+            catch (e) {
+                console.log(e)
+            }
+
+            return {
+                ...state,
+                selectMyTeamObj: state.selectMyTeamObj,
+                selectEnemyTeamObj: state.selectEnemyTeamObj,
+            }
+        case MY_PLAYER_OBJ_FOR_GAME:
+            const selectMyTeamBuff = {
+                teamTitle: state.selectMyTeamTitle,
+                teamNumbers: [] as any,
+                teamPlayers: [] as any,
+            }
+            for (let i =0; i < state.indexArrForGame.length; i++){
+                for (let j =0; j<state.selectMyTeamObj[0].teamNumbers.length; j++){
+                    if(state.indexArrForGame[i] === state.selectMyTeamObj[0].teamNumbers[j].playerNumber) {
+                        selectMyTeamBuff.teamNumbers.push(state.selectMyTeamObj[0].teamNumbers[j])
+                    }
+                }
+            }
+            return {
+                ...state,
+                myPlayersForGame:  [...state.myPlayersForGame ,selectMyTeamBuff]
+            }
+        case ENEMY_PLAYER_OBJ_FOR_GAME:
+            const selectEnemyTeamBuff = {
+                teamTitle: state.selectMyTeamTitle,
+                teamNumbers: [] as any,
+                teamPlayers: [] as any,
+            }
+            for (let i =0; i < state.indexArrEnemyForGame.length; i++){
+                for (let j =0; j<state.selectEnemyTeamObj[0].teamNumbers.length; j++){
+                    if(state.indexArrEnemyForGame[i] === state.selectEnemyTeamObj[0].teamNumbers[j].playerNumber) {
+                        selectEnemyTeamBuff.teamNumbers.push(state.selectEnemyTeamObj[0].teamNumbers[j])
+                    }
+                }
+            }
+            return {
+                ...state,
+                enemyPlayersForGame:  [...state.enemyPlayersForGame ,selectEnemyTeamBuff]
             }
         default :
             return state;
@@ -170,11 +303,29 @@ export const setActivePlayer = (playerID: number, isSelect: boolean) => ({
     type: SET_CHOSEN_PLAYER, playerID: playerID, isSelect: isSelect
 })
 export const setIndexOfClickedPlayer = (playerID: number) => ({type: SET_INDEX_OF_CLICKED_PLAYER, playerID: playerID})
-export const setIndexOfClickedEnemyPlayer = (playerID: number) => ({type: SET_INDEX_OF_CLICKED_ENEMY_PLAYER, playerID: playerID})
+export const setIndexOfClickedEnemyPlayer = (playerID: number) => ({
+    type: SET_INDEX_OF_CLICKED_ENEMY_PLAYER,
+    playerID: playerID
+})
 export const setActiveMyPlayersForGame = () => ({type: SET_ACTIVE_MY_PLAYERS_FOR_GAME})
 export const setActiveEnemyPlayersForGame = () => ({type: SET_ACTIVE_ENEMY_PLAYERS_FOR_GAME})
 export const clearActiveMyPlayersForGame = () => ({type: CLEAR_ACTIVE_MY_PLAYERS_FOR_GAME})
 export const clearActiveEnemyPlayersForGame = () => ({type: CLEAR_ACTIVE_ENEMY_PLAYERS_FOR_GAME})
+export const setSelectMyTeamObj = (myTeam: any) => ({type: SET_SELECT_MY_TEAM_OBJ, myTeam: myTeam})
+export const setSelectEnemyTeamObj = (enemyTeam: any) => ({type: SET_SELECT_ENEMY_TEAM_OBJ, enemyTeam: enemyTeam})
+export const changeClickedMyPlayers = (id: number) => ({
+    type: CHANGE_CLICKED_MY_PLAYERS,
+    id: id
+})
+export const changeClickedEnemyPlayers = (id: number) => ({
+    type: CHANGE_CLICKED_ENEMY_PLAYERS,
+    id: id
+})
+export const clearClicks = () => ({type:CLEAR_CLICKS})
+export const myPlayerObjForGame = () => ({type:MY_PLAYER_OBJ_FOR_GAME})
+export const enemyPlayerObjForGame = () => ({type:ENEMY_PLAYER_OBJ_FOR_GAME})
+export const myPlayerClickInGame = (id: number) => ({type:MY_PLAYER_CLICK_IN_GAME, id: id})
+export const enemyPlayerClickInGame = (id: number) => ({type:ENEMY_PLAYER_CLICK_IN_GAME, id: id})
 
 
 export default chooseTeamReducer;

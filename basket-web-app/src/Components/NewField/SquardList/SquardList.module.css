@@ -1,5 +1,5 @@
 .MyPlayersElement {
-    width: 152px;
+    width: 7vw;
     height: 107px;
     background: #FFA859;
     /*border: 5px solid #493D4E;*/
@@ -34,7 +34,7 @@
 }
 
 .EnemyPlayersElement {
-    width: 152px;
+    width: 7vw;
     height: 107px;
     background: #FFACBB;
     /*border: 5px solid #493D4E;*/
@@ -64,11 +64,15 @@
     border: 5px solid #493D4E;
 }
 
+.Clicked {
+    border: 5px solid #493D4E;
+}
+
 .MyPlayers {
     display: flex;
     flex-direction: column;
-    height: 800px;
-    width: 700px;
+    height: 1200px;
+    width: 40vw;
     flex-wrap: wrap;
 }
 
@@ -98,11 +102,9 @@
 }
 
 .MyTeam {
-    padding-left: 10vw;
 }
 
 .EnemyTeam {
-    padding-right: 30vw;
 }
 
 .Title {
@@ -135,8 +137,14 @@
 
 @media (max-width: 1200px) {
     .MyPlayers {
-        width: 0;
-        height: 1200px;
+        height: 1300px;
+    }
+    .MyPlayersElement {
+        width: 10vw;
+    }
+
+    .EnemyPlayersElement {
+        width: 10vw;
     }
 }
 
@@ -146,10 +154,34 @@
     }
 
     .EnemyTeam {
-        padding-right: 35vw;
+    }
+
+    .MyPlayersElement {
+        width: 12vw;
+    }
+
+    .EnemyPlayersElement {
+        width: 12vw;
     }
 }
 
 @media (max-width: 768px) {
 
+}
+
+@media (max-width: 510px) {
+    .MyPlayers {
+        height: 540px;
+        overflow: auto;
+        width: 30vw;
+        flex-wrap: nowrap;
+    }
+
+    .MyPlayersElement {
+        width: 22vw;
+    }
+
+    .EnemyPlayersElement {
+        width: 22vw;
+    }
 }

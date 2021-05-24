@@ -3,6 +3,7 @@ import './Player-Item.css'
 import Classes from "../SquardList.module.css";
 import {useDispatch} from "react-redux";
 import {
+    changeClickedMyPlayers,
     setActivePlayer,
     setIndexOfClickedPlayer,
     setMyTeamPlayers
@@ -12,36 +13,34 @@ import {createStatisticForMyTeam, setChosenPlayer} from "../../../../Redux/Redus
 type PlayerItemPropsType = {
     teamNumbers: any
     teamNames: any
-    isMyTeam: boolean
-    isClicked: boolean
+    teamTitle: string
 }
 
-const PlayerItem: React.FC<PlayerItemPropsType> = ({teamNumbers, isMyTeam, isClicked,teamNames}) => {
+const PlayerItem: React.FC<PlayerItemPropsType> = ({teamNumbers,  teamNames}) => {
 
-    const [click, setClick] = useState(isClicked)
+    const [click, setClick] = useState(false)
     const [playerID, setPlayerID] = useState(null)
     const dispatch = useDispatch()
 
     useEffect(() => {
         dispatch(setMyTeamPlayers(playersNumb))
         dispatch(createStatisticForMyTeam(teamNumbers, teamNames))
+
     },[])
 
-    const style = 'isClicked'
 
     const onClick = (e: any) => {
-         
         setClick((prev) => !prev)
         setPlayerID(e.target.id)
-        dispatch(setChosenPlayer(e.target.id))
         dispatch(setIndexOfClickedPlayer(+e.target.id))
+        dispatch(changeClickedMyPlayers(+e.target.id))
     }
 
     const playersNumb = teamNumbers.map((el: any) => {
         return (
             <div
-                className={`${Classes.MyPlayersElement}`}
-                onClick={onClick} id={el}>{el}</div>
+                className={el.isClicked ? `${Classes.MyPlayersElement} ${Classes.Clicked}` : `${Classes.MyPlayersElement}`}
+                onClick={onClick} id={el.playerNumber}>{el.playerNumber}</div>
         )
     })
 

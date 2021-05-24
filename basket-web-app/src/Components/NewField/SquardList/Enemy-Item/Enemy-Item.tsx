@@ -3,6 +3,7 @@ import './../Player-Item/Player-Item.css'
 import Classes from "../SquardList.module.css";
 import {useDispatch} from "react-redux";
 import {
+    changeClickedEnemyPlayers,
     setEnemyTeamPlayers,
     setIndexOfClickedEnemyPlayer
 } from "../../../../Redux/Redusers/Game-Window/choose-team-reducer";
@@ -11,13 +12,13 @@ import {createStatisticForEnemyTeam, setChosenPlayer} from "../../../../Redux/Re
 type PlayerItemPropsType = {
     teamNumbers: any
     isMyTeam: boolean
-    isClicked: boolean
     teamNames: any
+    teamTitle: string
 }
 
-const EnemyItem: React.FC<PlayerItemPropsType> = ({teamNumbers, isMyTeam, isClicked,teamNames}) => {
+const EnemyItem: React.FC<PlayerItemPropsType> = ({teamNumbers, isMyTeam, teamNames}) => {
 
-    const [click, setClick] = useState(isClicked)
+    const [click, setClick] = useState(false)
     const [playerID, setPlayerID] = useState(null)
     const dispatch = useDispatch()
 
@@ -29,20 +30,19 @@ const EnemyItem: React.FC<PlayerItemPropsType> = ({teamNumbers, isMyTeam, isClic
     const onClick = (e: any) => {
         setClick((prev) => !prev)
         setPlayerID(e.target.id)
-        dispatch(setChosenPlayer(e.target.id))
+        console.log('e.target.id')
+        console.log(e.target.id)
         dispatch(setIndexOfClickedEnemyPlayer(+e.target.id))
-         
+        dispatch(changeClickedEnemyPlayers(+e.target.id))
     }
 
-    console.log('click')
-    console.log(click)
 
     let count = 0
     const playersNumb = teamNumbers.map((el: any) => {
         return (
             <div
-                className={`${Classes.EnemyPlayersElement}`}
-                onClick={onClick} id={el}>{el}</div>
+                className={el.isClicked ? `${Classes.EnemyPlayersElement} ${Classes.Clicked}` : `${Classes.EnemyPlayersElement} `}
+                onClick={onClick} id={el.playerNumber}>{el.playerNumber}</div>
         )
     })
 

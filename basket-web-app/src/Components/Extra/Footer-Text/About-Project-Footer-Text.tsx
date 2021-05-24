@@ -3,9 +3,9 @@ import React from "react";
 const AboutProjectFooter = () => {
     return(
         <div className="Project">
-            <span className="PersonPageFooterText">Проектный офис ИКТИБ</span>
-            <span className="PersonPageFooterText">Южный Федеральный университет</span>
-            <span className="PersonPageFooterText">Институт Компьютерных Технологий и информационной безопасности</span>
+            <span className="PersonPageFooterText"><a href='https://vk.com/proictis'>Проектный офис ИКТИБ</a></span>
+            <span className="PersonPageFooterText"><a href='https://sfedu.ru/'>Южный Федеральный университет</a></span>
+            <span className="PersonPageFooterText"><a href='https://ictis.sfedu.ru/'>Институт Компьютерных Технологий и информационной безопасности</a></span>
         </div>
     )
 }

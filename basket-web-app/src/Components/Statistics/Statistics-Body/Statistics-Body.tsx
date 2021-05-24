@@ -13,6 +13,7 @@ const StatisticsBody = ({}) => {
     const apiKey = useSelector(getApiKey)
     const listOfGames = useSelector(getListOfGame)
     const inputRef = useRef<HTMLInputElement | null>(null)
+    const wrapperRef = useRef<HTMLDivElement | null>(null)
 
     useEffect(() => {
         dispatch(getListOfGamesThunk(apiKey))
@@ -52,7 +53,7 @@ const StatisticsBody = ({}) => {
             </div>
             <div className={Classes.StatisticsBlock}>
                 <span className={Classes.Text}>Статистика последних игр</span>
-                <div className={Classes.Games}>{games}</div>
+                <div className={Classes.Games} ref={wrapperRef}>{games}</div>
             </div>
         </div>
     )

@@ -17,7 +17,8 @@
 .NavigationButtons {
     display: flex;
     flex-direction: row;
-    padding-left: 7vw;
+    padding: 0 !important;
+    margin: auto;
 }
 
 @media (max-width: 1650px) {
@@ -98,9 +99,9 @@
 }
 
 @media (max-width: 767px) {
-    .NavigationButtons .DisableMobile {
-        display: none;
-    }
+    /*.NavigationButtons .DisableMobile {*/
+    /*    display: none;*/
+    /*}*/
 }
 
 @media (max-width: 480px) {
