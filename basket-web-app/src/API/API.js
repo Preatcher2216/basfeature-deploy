@@ -16,6 +16,7 @@ const instance = axios.create({
 export const setRegistrationUser = async (firstName, lastName, middleName, userName, password) => {
     let response = await (instance
         .get(`/authorization?type=registration&first_name=${firstName}&last_name=${lastName}&middle_name=${middleName}&username=${userName}&pas=${password}`))
+    console.log('Success')
 }
 export const setLoginUser = async (userName, password, setFetching, personInfo) => {
     setFetching(true);

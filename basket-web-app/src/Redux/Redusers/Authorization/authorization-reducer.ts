@@ -1,4 +1,4 @@
-import {setLoginUser} from "../../../API/API"
+import {setLoginUser, setRegistrationUser} from "../../../API/API"
 
 const PERSON_AUTHORISED = "PERSON_AUTHORISED"
 const PERSON_INFO = "PERSON_INFO"
@@ -140,6 +140,17 @@ export const loginThunkCreator = (userLogin: any, password: any, setFetching: an
             setFetching(false)
             errAuth()
             // setFetching(false);
+        })
+    }
+}
+
+export const registrationThunkCreator = (firstName: string, lastName: string, middleName: string, loginName: string, passwordName: string) => {
+    return (dispatch: any) => {
+        debugger
+        setRegistrationUser(firstName, lastName, middleName, loginName, passwordName).then(data => {
+            console.log(data)
+        }).catch((err:any) => {
+            alert('Произощла ошибка :( Попробуйте ещё раз.')
         })
     }
 }

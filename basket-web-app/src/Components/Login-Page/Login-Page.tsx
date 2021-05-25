@@ -5,11 +5,12 @@ import {setLoginUser, setRegistrationUser} from "../../API/API";
 import {Link, Redirect, Route, useHistory} from "react-router-dom";
 import {ClipLoader} from "react-spinners";
 import {current} from "@reduxjs/toolkit";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {getAuthorization} from "../NewMainPage/Main-Preson-Selectors";
 import './Login-Page.css'
 import PopupPlayersChoose from "../Modal/Players-Choose/Popup-Players-Choose";
 import Classes from "../About-Us/TeamMembers/Team-Members-Element/Team-Members-Element.module.css";
+import {registrationThunkCreator} from "../../Redux/Redusers/Authorization/authorization-reducer";
 
 const fetchingStyle = {
     position: "absolute",
@@ -171,9 +172,11 @@ const LoginPage: React.FC<PropsType> = ({loginThunkCreator, personInfo}) => {
     const [fetching, setFetching] = useState(false);
 
     const isAuth = useSelector(getAuthorization)
+    const dispatch = useDispatch()
 
-    const clickRegistration = () => {
+    const clickRegistration = (e:any) => {
         setRegistration(false)
+        RegistrationSubmit(e)
     }
 
     const refElem = useRef<any>(null)
@@ -232,10 +235,14 @@ const LoginPage: React.FC<PropsType> = ({loginThunkCreator, personInfo}) => {
         passwordName: string
         passwordNameRepeat: string
     }
-    const RegistrationSubmit = (e: RegistrationSubmitType) => {
-        setRegistrationUser(e.firstName, e.lastName, e.middleName, e.loginName, e.passwordName).then(data => {
-
-        })
+    const RegistrationSubmit = (e: any) => {
+        debugger
+        dispatch(registrationThunkCreator(
+            e.currentTarget.parentElement.parentElement.children[0].children[0].children[0].value,
+            e.currentTarget.parentElement.parentElement.children[0].children[1].children[0].value,
+            e.currentTarget.parentElement.parentElement.children[0].children[2].children[0].value,
+            e.currentTarget.parentElement.parentElement.children[0].children[3].children[0].value,
+            e.currentTarget.parentElement.parentElement.children[0].children[4].children[0].value))
     }
     type ErrorsType = {
         login: string
