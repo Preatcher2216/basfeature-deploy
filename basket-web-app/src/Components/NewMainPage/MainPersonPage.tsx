@@ -222,7 +222,7 @@ export const MainPersonPage: React.FC<PropsType> = () => {
                     <div className='HeaderText'>
                         <span className='SubHeaderTextOne'>Здесь вы сможете</span>
                         <span className='SubHeaderTextTwo'>Создавать, редактировать, удалять команды</span>
-                        <span className='SubHeaderTextThree'>Чтобы начать матч, перейдите на вклюдку "Матч"</span>
+                        <span className='SubHeaderTextThree'>Чтобы начать матч, перейдите на вкладку "Матч"</span>
                     </div>
                     <div className='SfeduLogo'>
                         <img src={SfeduLogo} alt='Логотип ЮФУ' style={{height: '258px', width: '276px'}}/>
